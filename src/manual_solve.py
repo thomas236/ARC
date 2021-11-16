@@ -4,21 +4,24 @@ import os, sys
 import json
 import numpy as np
 import re
+import time
+from collections import Counter
 
 ### YOUR CODE HERE: write at least three functions which solve
 ### specific tasks by transforming the input x and returning the
 ### result. Name them according to the task ID as in the three
 ### examples below. Delete the three examples. The tasks you choose
 ### must be in the data/training directory, not data/evaluation.
-# Test commit
-def solve_6a1e5592(x):
-    return x
 
-def solve_b2862040(x):
-    return x
 
-def solve_05269061(x):
+# Written by Thomas
+def solve_5582e5ca(x):
+    print (x)
+    shape = x.shape
+    value = Counter(x.flatten()).most_common(1)
+    x = np.full(shape=shape, fill_value=(value[0][0]))
     return x
+# Written by Thomas above
 
 
 def main():
@@ -27,6 +30,7 @@ def main():
 
     # regex to match solve_* functions and extract task IDs
     p = r"solve_([a-f0-9]{8})" 
+    
     tasks_solvers = []
     # globals() gives a dict containing all global names (variables
     # and functions), as name: value pairs.
@@ -91,7 +95,6 @@ def show_result(x, y, yhat):
         print(f"False. Incorrect shape: {y.shape} v {yhat.shape}")
     else:
         print(np.all(y == yhat))
-
 
 if __name__ == "__main__": main()
 
