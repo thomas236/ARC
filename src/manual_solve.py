@@ -14,15 +14,25 @@ from collections import Counter
 ### must be in the data/training directory, not data/evaluation.
 
 
-# Written by Thomas
+# Written by Thomas below this comment
 def solve_5582e5ca(x):
     print (x)
     shape = x.shape
     value = Counter(x.flatten()).most_common(1)
     x = np.full(shape=shape, fill_value=(value[0][0]))
     return x
-# Written by Thomas above
 
+def solve_d511f180(x):
+    print (x)
+    shape = x.shape
+    for row in range(shape[0]):
+        for column in range(shape[1]):
+            if x[row][column] == 8:
+                x[row][column]=5
+            elif x[row][column] == 5:
+                x[row][column]=8
+    return x
+# Written by Thomas above this comment
 
 def main():
     # Find all the functions defined in this file whose names are
