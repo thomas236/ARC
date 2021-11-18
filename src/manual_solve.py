@@ -16,14 +16,14 @@ from collections import Counter
 
 # Written by Thomas below this comment
 def solve_5582e5ca(x):
-    print (x)
     shape = x.shape
-    value = Counter(x.flatten()).most_common(1)
+    value = Counter(x.flatten()).most_common(3)
+    print (value)
+    time.sleep(100)
     x = np.full(shape=shape, fill_value=(value[0][0]))
     return x
 
 def solve_d511f180(x):
-    print (x)
     shape = x.shape
     for row in range(shape[0]):
         for column in range(shape[1]):
