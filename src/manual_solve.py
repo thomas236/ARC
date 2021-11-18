@@ -34,11 +34,12 @@ def solve_d511f180(x):
     return x
 # Written by Thomas above this comment
 
-
+# Written by Dave below this line
 def solve_5582e5ca(x):
     value = Counter(x.flatten()).most_common(3)
     x = np.array([(value[0][0]),(value[1][0]),(value[2][0])])
     return x
+# Written by Dave below this line
 
 def main():
     # Find all the functions defined in this file whose names are
