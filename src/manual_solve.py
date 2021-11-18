@@ -17,7 +17,7 @@ from collections import Counter
 # Written by Thomas below this comment
 def solve_5582e5ca(x):
     shape = x.shape
-    value = Counter(x.flatten()).most_common(3)
+    value = Counter(x.flatten()).most_common(1)
     print (value)
     time.sleep(100)
     x = np.full(shape=shape, fill_value=(value[0][0]))
@@ -33,6 +33,12 @@ def solve_d511f180(x):
                 x[row][column]=8
     return x
 # Written by Thomas above this comment
+
+
+def solve_5582e5ca(x):
+    value = Counter(x.flatten()).most_common(3)
+    x = np.array([(value[0][0]),(value[1][0]),(value[2][0])])
+    return x
 
 def main():
     # Find all the functions defined in this file whose names are
