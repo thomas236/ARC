@@ -39,7 +39,17 @@ def solve_f8ff0b80(x):
     value = Counter(x.flatten()).most_common(3)
     x = np.array([(value[0][0]),(value[1][0]),(value[2][0])])
     return x
-# Written by Dave below this line
+
+def solve_c8f0f002(x):
+    shape = x.shape
+    for row in range(shape[0]):
+        for column in range(shape[1]):
+            if x[row][column] == 7:
+                x[row][column]= 5
+            elif x[row][column] == 5:
+                x[row][column]= 7
+    return x
+# Written by Dave above this line
 
 def main():
     # Find all the functions defined in this file whose names are
