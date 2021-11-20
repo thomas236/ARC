@@ -60,10 +60,20 @@ def solve_e3497940(x):
     x = x[:,:4]
     return x
 
+def solve_c3f(x):
+    shape = x.shape
+    for row in range(shape[0]):
+        for column in range (int(shape[1]/2)):
+            if x[row][column]==0:
+                x[row][column] = x[row][shape[1]-column-1]
+    x = x[:,:4]
+    return x
+
 
 # Written by Thomas above this comment
 
 # # Written by Dave below this line
+
 def solve_f8ff0b80(x):
     x_non_zero = (x[(x!=0)])
     value = Counter(x_non_zero.flatten()).most_common(3)
