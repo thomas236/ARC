@@ -41,6 +41,16 @@ def solve_f8b3ba0a(x):
                  [value[-2][0]],
                  [value[-1][0]]])
     return x
+
+def solve_22eb0ac0(x):
+    shape = x.shape
+    for row in range(shape[0]):
+        if x[row][0]!=0:
+            if x[row][0] == x[row][shape[1]-1]:
+                for column in range(1,shape[1]-1):
+                    x[row][column]=x[row][0]
+    return x
+
 # Written by Thomas above this comment
 
 # Written by Dave below this line
