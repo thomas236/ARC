@@ -123,11 +123,11 @@ def test(taskID, solve, data):
         
 def show_result(x, y, yhat):
     print("Input")
-    # print(x)
+    print(x)
     print("Correct output")
-    # print(y)
+    print(y)
     print("Our output")
-    # print(yhat)
+    print(yhat)
     print("Correct?")
     if y.shape != yhat.shape:
         print(f"False. Incorrect shape: {y.shape} v {yhat.shape}")
