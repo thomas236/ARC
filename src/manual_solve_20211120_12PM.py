@@ -60,7 +60,6 @@ def solve_e3497940(x):
     x = x[:,:4]
     return x
 
-
 # Written by Thomas above this comment
 
 # # Written by Dave below this line
