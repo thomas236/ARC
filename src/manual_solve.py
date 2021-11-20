@@ -30,17 +30,30 @@ def solve_d511f180(x):
             elif x[row][column] == 5:
                 x[row][column]=8
     return x
+
+def solve_f8b3ba0a(x):
+    x_non_zero = (x[(x!=0)])
+    value = Counter(x_non_zero.flatten()).most_common()
+    #Thomas: Applied fix for incorrect shape error by removing extra brackets
+    #that were included for each element of the matrix. Also vecotirixed it by
+    # adding extra brackets the beginning and end of np.arrray 
+    x = np.array([[value[-3][0]],
+                 [value[-2][0]],
+                 [value[-1][0]]])
+    return x
 # Written by Thomas above this comment
 
 # Written by Dave below this line
 def solve_f8ff0b80(x):
-    value = Counter(x.flatten()).most_common(3)
+    x_non_zero = (x[(x!=0)])
+    value = Counter(x_non_zero.flatten()).most_common(3)
     #Thomas: Applied fix for incorrect shape error by removing extra brackets
+    #Thomas: Removed non xero values as well before finding most common
     #that were included for each element of the matrix. Also vecotirixed it by
     # adding extra brackets the beginning and end of np.arrray 
     x = np.array([[value[0][0]],
-                 [value[1][0]],
-                 [value[2][0]]])
+                  [value[1][0]],
+                  [value[2][0]]])
     return x
 
 def solve_c8f0f002(x):
@@ -54,12 +67,12 @@ def solve_c8f0f002(x):
     return x
 
 def solve_d631b094(x):
-     #Thomas: function above was not running because of typo error -> not including 'd'
-     # in function name
-     #Correction: renamed from np.nonzero to check if value !=0
-     value = Counter((x[(x!=0)]).flatten()).most_common(1)
-     x = np.full(shape=(1,value[0][1]), fill_value=(value[0][0]))
-     return x
+      #Thomas: function above was not running because of typo error -> not including 'd'
+      # in function name
+      #Correction: renamed from np.nonzero to check if value !=0
+      value = Counter((x[(x!=0)]).flatten()).most_common(1)
+      x = np.full(shape=(1,value[0][1]), fill_value=(value[0][0]))
+      return x
 # Written by Dave above this line
 
 def main():
