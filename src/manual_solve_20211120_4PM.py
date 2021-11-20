@@ -111,7 +111,7 @@ def solve_c8f0f002(x):
 
 def solve_d631b094(x):
       #Thomas: function above was not running because of typo error -> not including 'd'
-      #in function name
+      # in function name
       #Correction: renamed from np.nonzero to check if value !=0
       value = Counter((x[(x!=0)]).flatten()).most_common(1)
       x = np.full(shape=(1,value[0][1]), fill_value=(value[0][0]))
