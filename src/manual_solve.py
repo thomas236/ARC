@@ -3,11 +3,14 @@
 
 Assignment 3: Hand-coding solutions for the Abstraction and Reasoning Corpus
 Student name(s): Thomas Sebastian, David Power
-Student ID(s): 21250103,
+Student ID(s): 21250103, 21249194
 
 Github URLs:
 Thomas Sebastian --> https://github.com/thomas236/ARC
-David Power -->
+David Power --> https://github.com/DaithidePaor/ARC 
+
+https://github.com/thomas236/ARC is Master, forked & cloned to David Power local 
+
 """
 
 import os, sys
