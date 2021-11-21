@@ -69,8 +69,7 @@ When you're done with a task, use the "load task" button to open a new task.
 
 Team: Thomas Sebastian (Student No: 21250103) and David Power (Student No: 21249194)
 
-ARC Puzzles solved: 5582e5ca / d511f180 / f8b3ba0a / 22eb0ac0 / e3497940 / c3f564a4 / f8ff0b80 / c8f0f002 / d631b094 
-ARC Puzzle part-solved: d0f5fe59
+ARC Puzzles solved: 5582e5ca / d511f180 / f8b3ba0a / 22eb0ac0 / e3497940 / c3f564a4 / f8ff0b80 / c8f0f002 / d631b094 / d0f5fe59
 
 Running manual_solve.py executes the puzzle solution functions where the input, output arrays and a boolean True or False is printed to the console. 
 
